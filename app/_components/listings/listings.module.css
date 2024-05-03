@@ -1,0 +1,8 @@
+.listing__favourite_text {
+color: white;
+font-size: 0.75rem;
+font-weight: 500;
+}
+.listing__favourite:hover+.listing__favourite_text {
+    font-size: 50px;
+}
