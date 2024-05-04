@@ -3,7 +3,7 @@ import ThemeButton from '../ThemeButton'
 
 const Modal = ({
     title,
-    onClick,
+    modalHandleClose,
     body,
     footer,
 }) => {
@@ -23,7 +23,7 @@ const Modal = ({
                         <div className='relative flex justify-start items-center p-6 rounded-t border-b-[1px]'>
                             {/* buton for closing modals */}
                             <button 
-                            onClick={onClick}
+                            onClick={modalHandleClose}
                             className='flex-none'
                             > 
                             <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24"><path fill="black" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z"></path></svg>

@@ -19,7 +19,7 @@ const ThemeButton = ({
         relative
         disabled:opacity-70
         disabled:cursor-not-allowed
-        rounded-lg
+        rounded-xl
         hover:opacity-80
         transition
         w-full

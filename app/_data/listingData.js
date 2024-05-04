@@ -9,7 +9,7 @@ const listingCardItem = [
         addressOfStore: "123 Main Street, City, Country",
         reviewOfStore: 4.5,
         price:300,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -36,7 +36,7 @@ const listingCardItem = [
         addressOfStore: "456 Oak Avenue, Town, Country",
         reviewOfStore: 5,
         price:400,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -64,7 +64,7 @@ const listingCardItem = [
         addressOfStore: "789 Elm Street, Town, Country",
         reviewOfStore: 5,
         price:100,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -90,7 +90,7 @@ const listingCardItem = [
         addressOfStore: "101 Pine Avenue, City, Country",
         reviewOfStore: 5,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -117,7 +117,7 @@ const listingCardItem = [
         addressOfStore: "555 Cedar Road, Town, Country",
         reviewOfStore: 4,
         price:300,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -144,7 +144,7 @@ const listingCardItem = [
         addressOfStore: "246 Oak Street, City, Country",
         reviewOfStore: 4,
         price:400,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -171,7 +171,7 @@ const listingCardItem = [
         addressOfStore: "777 Maple Avenue, Town, Country",
         reviewOfStore: 5,
         price:500,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -198,7 +198,7 @@ const listingCardItem = [
         addressOfStore: "888 Elm Street, City, Country",
         reviewOfStore: 5,
         price:400,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -225,7 +225,7 @@ const listingCardItem = [
         addressOfStore: "333 Cedar Road, Town, Country",
         reviewOfStore: 5,
         price:300,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -252,7 +252,7 @@ const listingCardItem = [
         addressOfStore: "456 Pine Avenue, City, Country",
         reviewOfStore: 4,
         price:500,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -279,7 +279,7 @@ const listingCardItem = [
         addressOfStore: "999 Oak Street, Town, Country",
         reviewOfStore: 4,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -306,7 +306,7 @@ const listingCardItem = [
         addressOfStore: "222 Maple Road, City, Country",
         reviewOfStore: 3,
         price:100,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -333,7 +333,7 @@ const listingCardItem = [
         addressOfStore: "789 Cedar Avenue, Town, Country",
         reviewOfStore: 3,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -360,7 +360,7 @@ const listingCardItem = [
         addressOfStore: "555 Pine Street, City, Country",
         reviewOfStore: 4,
         price:300,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -387,7 +387,7 @@ const listingCardItem = [
         addressOfStore: "101 Oak Road, Town, Country",
         reviewOfStore: 4,
         price:400,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -414,7 +414,7 @@ const listingCardItem = [
         addressOfStore: "123 Cedar Avenue, City, Country",
         reviewOfStore: 5,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -448,7 +448,7 @@ const listingCardItem = [
         addressOfStore: "456 Maple Road, Town, Country",
         reviewOfStore: 4,
         price:500,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -475,7 +475,7 @@ const listingCardItem = [
         addressOfStore: "999 Pine Street, City, Country",
         reviewOfStore: 4,
         price:600,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -502,7 +502,7 @@ const listingCardItem = [
         addressOfStore: "789 Oak Avenue, Town, Country",
         reviewOfStore: 3,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -529,7 +529,7 @@ const listingCardItem = [
         addressOfStore: "333 Elm Street, City, Country",
         reviewOfStore: 3,
         price:300,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -556,7 +556,7 @@ const listingCardItem = [
         addressOfStore: "666 Maple Road, Town, Country",
         reviewOfStore: 5,
         price:200,
-        Category:[
+        category:[
             {
                 id: 1,
                 img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
