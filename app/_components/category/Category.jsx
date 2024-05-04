@@ -1,14 +1,14 @@
 'use client'
+
 import { listingCategoryItem } from '@/app/_data/listingCategoryItem';
 import Heading from '../Heading';
 import Container from '../Container';
 
 import Link from "next/link"
 import Image from 'next/image'
-import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import SlidingHandleButton from '../SlidingHandleButton';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 const Category = () => {
     const listRef = useRef(null)
@@ -39,7 +39,6 @@ const Category = () => {
     },[params])
 
 
-
     return (
         <section className=''>
             <Container>
@@ -51,17 +50,28 @@ const Category = () => {
                 <div className='flex flex-row justify-start items-center gap-2 overflow-auto md:overflow-hidden overflow-y-hidden'
                     ref={listRef}>
                     {
-                        categorylist && categorylist.map((cate, index) => (
-                            <Link href={`/listings/${cate.slug}`} key={index}
+                        categorylist && categorylist.map((cate) => (
+                            <>
+                            
+                            <Link href={'/listings/?category='+cate.slug} key={cate.id}
                                 className={` relative cursor-pointer flex flex-col justify-center items-center group min-w-52 h-[150px] overflow-hidden
-                                ${selectedCategory === cate.slug && 'border-2 border-black rounded-lg'}
+                                ${selectedCategory === cate.slug && 'border-[1px] border-black rounded-lg'}
                                 `
                                 }>
                                 <Image alt={cate.alt} src={cate.img}
                                     fill
-                                    className='filter brightness-90 group-hover:brightness-50 group-hover:scale-125 object-cover rounded-lg w-full h-full  transition-all duration-300' />
-                                <h3 className='absolute text-white text-xl translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-10'>{cate.title}</h3>
+                                    className={`filter brightness-90 group-hover:brightness-50 group-hover:scale-125 object-cover rounded-lg w-full h-full  transition-all duration-300
+                                    ${selectedCategory === cate.slug && 'scale-125 brightness-50'}
+                                    `} />
+                                <h3 
+                                // onClick={getTitleHandle}
+                                className={`absolute text-white text-xl translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-10
+                                ${selectedCategory === cate.slug && 'translate-y-0'}`}>
+                                {cate.title}
+                                </h3>
                             </Link>
+                            </>
+                           
                         ))}
                 </div>
                 <SlidingHandleButton
