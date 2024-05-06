@@ -23,10 +23,13 @@ import { updateCategoryInURL } from '@/app/_lib/utils'
 import Category from '@/app/_components/category/Category'
 import ListingFilterBar from '@/app/_components/ListingFilterBar'
 import { OrderBy, ThemeSelect } from '@/app/_components/OrderBy'
+import Modal from '@/app/_components/modals/Modal'
+import { locationdata } from '@/app/_data/locationdata'
 
 
 const ListingPage = () => {
   const getListingData = listingCardItem
+  const getLocationData = locationdata
 
   const [category, setCategory] = useState('all');
   const params = useSearchParams();
@@ -35,15 +38,57 @@ setCategory(params.get('category'))
  },[params])
 
  
+ const [isopen, setIsopen] = useState(false)
+  const modalHandleOpen = () => {
+    setIsopen(!isopen)
+  }
+
+  const modalHandleClose = ()=> {
+    setIsopen(false)
+  }
+
+  const body= (
+    <div>
+        <SearchBooking />
+        <p>Từ khóa tìm kiếm phổ biến theo khu vực</p>
+        <div className='flex flex-row gap-3'>
+        {getLocationData && getLocationData.map((location)=> (
+          <div
+          className=''
+           key={location.locationId}>
+            <p>{location.locationTitle}</p>
+            <Image
+             src={location.img}
+              alt={location.locationTitle}
+              width={100}
+              height={100}
+             />
+          </div>
+
+        ))}
+        </div>
+    </div>
+  )
 
  
 
   return (
     <>
       <Header />
+      { isopen && 
+      <Modal 
+       modalHandleClose={()=> modalHandleClose() }
+        title="vui lòng chọn địa điểm hoặc cửa hàng"
+        body={body}
+        
+
+
+      />}
       <Container>
         {/* search */}
-        <div className='sticky md:relative top-0 z-20 bg-white px-4 py-2 shadow-md md:shadow-none'>
+        <div className='sticky md:relative top-0 z-20 bg-white px-4 py-2 shadow-md md:shadow-none'
+        onClick={()=>modalHandleOpen()}
+        >
           <SearchBooking 
             className="flex"
           />

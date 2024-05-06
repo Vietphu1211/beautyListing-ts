@@ -1,33 +1,7 @@
-import React, { useState } from 'react'
-import { DatePickerDemo } from '../DatePicker'
 import { Input } from '@/components/ui/input'
-import ThemeDropdown from '../dropDown/ThemeDropdown'
 import ThemeButton from '../ThemeButton'
 import { Search } from 'lucide-react'
-import Modal from '../modals/Modal'
-import CarouselComponent from '../CarouselComponent'
-
 const SearchBooking = () => {
-  const [isopen, setIsopen] = useState(false)
-  const modalHandleOpen = () => {
-    setIsopen(!isopen)
-  }
-
-  const modalHandleClose = ()=> {
-    setIsopen(false)
-  }
-
-
-  const body= (
-    <div>
-        <SearchBooking />
-        <div>
-        <p>Từ khóa tìm kiếm phổ biến theo khu vực</p>
-        <CarouselComponent />
-        </div>
-    </div>
-  )
-
   return (
     <div className=''>
       
@@ -35,18 +9,8 @@ const SearchBooking = () => {
         <Input 
           type="text"
           placeholder="Sơn Trà, Đà Nẵng"
-          className="cursor-pointer focus:outline-none outline-none focus-visible:outline-none mx-1 my-1 h-full"
-          onClick={()=> modalHandleOpen()}
+          className="cursor-pointer  mx-1 my-1 h-full"
         />
-      { isopen && 
-      <Modal 
-       modalHandleClose={()=> modalHandleClose() }
-        title="vui lòng chọn địa điểm hoặc cửa hàng"
-        body={body}
-        
-
-
-      />}
         {/* <DatePickerDemo /> */}
         {/* <div>
         <ThemeDropdown />

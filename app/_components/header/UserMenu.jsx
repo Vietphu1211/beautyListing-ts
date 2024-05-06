@@ -10,7 +10,7 @@ const UserMenu = ({
     return (
         <>
             <div
-            className='flex flex-row gap-1 text-gray-500 hover:text-primary cursor-pointer  border-[0.5px] border-black rounded-md p-[1px]' >
+            className='flex flex-row gap-1 text-white hover:text-primary cursor-pointer rounded-md p-[1px]' >
                 <CircleUser />
                 <AlignJustify
                 className='block md:hidden'
