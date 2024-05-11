@@ -1,21 +1,17 @@
 const listNavItem = [
+    
     {
         id: 1,
-        title: "Homepage",
-        path:"/"
-    },
-    {
-        id: 2,
         title: "About",
         path:"/about"
     },
     {
-        id: 3,
+        id: 2,
         title: "Blog",
         path:"/blog"
     },
     {
-        id: 4,
+        id: 3,
         title: "Listings",
         path:"/listings"
     }

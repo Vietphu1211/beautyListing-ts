@@ -4,7 +4,7 @@ import Blog from '@/app/_components/Blog/Blog'
 import BlogPostCard from '@/app/_components/Blog/BlogPostCard'
 import { BreadcrumbCollapsed } from '@/app/_components/BreadcrumbCollapsed'
 import Container from '@/app/_components/Container'
-import { PaginationComponent } from '@/app/_components/Pagination'
+import { PaginationComponent } from '@/app/_components/pagination/Pagination'
 import Footer from '@/app/_components/footer/Footer'
 import Header from '@/app/_components/header/Header'
 import blogPostItem from '@/app/_data/getBlogPostItem'
@@ -16,6 +16,7 @@ import { useState } from 'react'
 
 export default function BlogHubPage() {
 
+    
     const router = useRouter();
     const goToPost = (slug) => {
         router.push(`/${slug}`);
@@ -30,6 +31,10 @@ export default function BlogHubPage() {
     setTimeout(() => {
         setIsLoading(false)
     }, 1000)
+
+    function handlePageChange(newPage){
+        console.log('new page:', newPage)
+    }
 
     return (
         <>
@@ -65,7 +70,9 @@ export default function BlogHubPage() {
                                     </div>
                                 </div>
 
-                                <PaginationComponent />
+                                <PaginationComponent 
+                                   
+                                />
                             </Container>
                             <Footer />
                         </>

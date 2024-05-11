@@ -11,14 +11,12 @@ const UserMenu = ({
         <>
             <div
             className='flex flex-row gap-1 text-white hover:text-primary cursor-pointer rounded-md p-[1px]' >
-                <CircleUser />
+                <CircleUser className='hidden md:block'/>
                 <AlignJustify
-                className='block md:hidden'
+                className='block md:hidden border rounded-md w-10 h-7'
                 onClick={onClick} 
-
                 />
             </div>
-            {/* <Navbar /> */}
         </>
     )
 }
