@@ -1,16 +1,14 @@
 'use client'
-import Category from "./_components/category/Category";
 import Listings from "./_components/listings/Listings";
 import SearchPlace from "./_components/search/SearchPlace";
 import Blog from "./_components/Blog/Blog";
 import Loading from "./Loading";
 import { useEffect, useState } from "react";
-import PostCardSkeleton from "./_components/skeleton/PostCardSkeleton";
 import Header from "./_components/header/Header";
 import Footer from "./_components/footer/Footer";
-import Modal from "./_components/modals/Modal";
 import CategoryModal from "./_components/modals/CategoryModal";
 import Feelback from "./_components/feelback/Feelback";
+import CategoryList from "./_components/category/CategoryList";
 
 
 
@@ -25,9 +23,12 @@ export default function Home() {
 isLoading ? (
   <>
       <CategoryModal />
+      <section className='my-3 absolute  w-full mx-auto z-20'>
       <Header />
+      </section>
       <SearchPlace />
-      <Category />
+      {/* <Category /> */}
+      {/* <CategoryList /> */}
       <Listings />
       <Blog />
       <Feelback />

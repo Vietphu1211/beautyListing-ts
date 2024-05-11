@@ -17,7 +17,9 @@ export default function Page() {
   const router = useRouter()
   return (
     <>
-      <Header />
+      <section className='my-3 bg-neutral-900  w-full mx-auto z-20'>
+    <Header />
+    </section>
       <Container>
         <BreadcrumbCollapsed />
         <div className='w-full md:w-[80%] lg:w-[60%] mx-auto px-1'>

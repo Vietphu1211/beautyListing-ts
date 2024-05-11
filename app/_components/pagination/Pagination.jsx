@@ -8,14 +8,21 @@ import {
     PaginationPrevious,
   } from "@/components/ui/pagination"
   
+  
+
   export function PaginationComponent() {
+  
+
     return (
         <div className="flex justify-center items-center my-8">
         <Pagination>
         <PaginationContent>
+
           <PaginationItem>
-            <PaginationPrevious href="#" />
+            <PaginationPrevious href="#" 
+                      />
           </PaginationItem>
+
           <PaginationItem>
             <PaginationLink href="#">1</PaginationLink>
           </PaginationItem>
@@ -27,11 +34,12 @@ import {
           <PaginationItem>
             <PaginationLink href="#">3</PaginationLink>
           </PaginationItem>
+          
+
+
           <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
+            <PaginationNext href="#" 
+                          />
           </PaginationItem>
         </PaginationContent>
       </Pagination>

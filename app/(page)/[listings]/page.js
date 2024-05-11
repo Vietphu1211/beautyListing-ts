@@ -16,7 +16,7 @@ import ListingCard from '@/app/_components/listings/ListingCard'
 import listingCardItem from '@/app/_data/listingData'
 import { MapPin, SquarePlus, Star } from 'lucide-react'
 import { Pagination } from '@/components/ui/pagination'
-import { PaginationComponent } from '@/app/_components/Pagination'
+import { PaginationComponent } from '@/app/_components/pagination/Pagination'
 import SearchBooking from '@/app/_components/search/SearchBooking'
 import { useEffect, useState } from 'react'
 import { updateCategoryInURL } from '@/app/_lib/utils'
@@ -25,6 +25,7 @@ import ListingFilterBar from '@/app/_components/ListingFilterBar'
 import { OrderBy, ThemeSelect } from '@/app/_components/OrderBy'
 import Modal from '@/app/_components/modals/Modal'
 import { locationdata } from '@/app/_data/locationdata'
+import CategoryList from '@/app/_components/category/CategoryList'
 
 
 const ListingPage = () => {
@@ -94,7 +95,8 @@ setCategory(params.get('category'))
           />
         </div>
         {/* category */}
-        <Category />
+        {/* <Category /> */}
+        <CategoryList/>
         {/* order by: */}
         <OrderBy />
         

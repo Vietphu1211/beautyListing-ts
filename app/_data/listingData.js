@@ -3,6 +3,7 @@ const listingCardItem = [
     {
         listingId: 1,
         title: "Alpha Beauty Salon",
+        slug:'alpha-beauty-salon',
         subtitle: "Your destination for beauty services",
         src:"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Alpha Beauty Salon",
@@ -30,6 +31,7 @@ const listingCardItem = [
     {
         listingId: 2,
         title: "Belle Hair Studio",
+        slug:'belle-hair-studio',
         subtitle: "Where beauty meets style",
         src: "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Belle Hair Studio",
@@ -58,6 +60,7 @@ const listingCardItem = [
     {
         listingId: 3,
         title: "Chic Nails & Spa",
+        slug:'chic-nail-spa',
         subtitle: "Pamper yourself with our luxurious nail treatments",
         src: "https://plus.unsplash.com/premium_photo-1682090995179-fcba95185bf5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Chic Nails & Spa",
@@ -85,6 +88,7 @@ const listingCardItem = [
     {
         listingId: 4,
         title: "Dapper Barbershop",
+        slug:'dapper-barbershop',
         subtitle: "Experience precision cuts and classic grooming",
         src: "https://plus.unsplash.com/premium_photo-1664301489002-2fed4596c101?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         addressOfStore: "101 Pine Avenue, City, Country",
@@ -111,6 +115,7 @@ const listingCardItem = [
     {
         listingId: 5,
         title: "Elegance Beauty Spa",
+        slug:'Elegance-Beauty-Spa',
         subtitle: "Indulge in our rejuvenating spa treatments",
         src: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNhbG9ufGVufDB8fDB8fHww",
         alt: "Elegance Beauty Spa",
@@ -138,6 +143,8 @@ const listingCardItem = [
     {
         listingId: 6,
         title: "Fabulous Eyewear Boutique",
+        slug:'Fabulous-Eyewear-Boutique',
+
         subtitle: "Find your perfect pair of glasses with us",
         src: "https://plus.unsplash.com/premium_photo-1661507233081-76acef756813?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNhbG9ufGVufDB8fDB8fHww",
         alt: "Fabulous Eyewear Boutique",
@@ -165,6 +172,8 @@ const listingCardItem = [
     {
         listingId: 7,
         title: "Glamour Makeup Studio",
+        slug:'Glamour-Makeup-Studio',
+
         subtitle: "Transform your look with our professional makeup artists",
         src: "https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNhbG9ufGVufDB8fDB8fHww",
         alt: "Glamour Makeup Studio",
@@ -192,6 +201,8 @@ const listingCardItem = [
     {
         listingId: 8,
         title: "Heavenly Spa Retreat",
+        slug:'Heavenly-Spa-Retreat',
+
         subtitle: "Escape to paradise with our luxurious spa treatments",
         src: "https://plus.unsplash.com/premium_photo-1664048712891-f9b6b0c62369?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D",
         alt: "Heavenly Spa Retreat",
@@ -219,6 +230,8 @@ const listingCardItem = [
     {
         listingId: 9,
         title: "Iconic Hair Salon",
+        slug:'Iconic-Hair-Salon',
+
         subtitle: "Discover your signature hairstyle with us",
         src: "https://images.unsplash.com/photo-1595475693741-b445b025aec7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8",
         alt: "Iconic Hair Salon",
@@ -246,6 +259,8 @@ const listingCardItem = [
     {
         listingId: 10,
         title: "Jewel Nail Bar",
+        slug:'Jewel-Nail-Bar',
+
         subtitle: "Your nails deserve to shine",
         src: "https://images.unsplash.com/photo-1626383137804-ff908d2753a2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8",
         alt: "Jewel Nail Bar",
@@ -273,6 +288,8 @@ const listingCardItem = [
     {
         listingId: 11,
         title: "Kingsman Barber Lounge",
+        slug:'Kingsman-Barber-Lounge',
+
         subtitle: "Experience the ultimate grooming experience",
         src: "https://plus.unsplash.com/premium_photo-1664048712492-9d395c204e37?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHx8",
         alt: "Kingsman Barber Lounge",
@@ -300,6 +317,8 @@ const listingCardItem = [
     {
         listingId: 12,
         title: "Luxe Beauty Bar",
+        slug:'Luxe-Beauty-Bar',
+
         subtitle: "Luxury awaits at our beauty sanctuary",
         src: "https://images.unsplash.com/photo-1595944024804-733665a112db?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8",
         alt: "Luxe Beauty Bar",
@@ -327,6 +346,8 @@ const listingCardItem = [
     {
         listingId: 13,
         title: "Majestic Hair Studio",
+        slug:'Majestic-Hair-Studio',
+
         subtitle: "Where your hair dreams come true",
         src: "https://images.unsplash.com/photo-1632768456611-8163e79f6cd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8",
         alt: "Majestic Hair Studio",
@@ -354,6 +375,8 @@ const listingCardItem = [
     {
         listingId: 14,
         title: "Nirvana Day Spa",
+        slug:'Nirvana-Day-Spa',
+
         subtitle: "Find serenity and relaxation with us",
         src: "https://images.unsplash.com/flagged/photo-1575277942704-3b02a862e5f6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8",
         alt: "Nirvana Day Spa",
@@ -381,6 +404,8 @@ const listingCardItem = [
     {
         listingId: 15,
         title: "Opulent Makeup Studio",
+        slug:'Opulent-Makeup-Studio',
+
         subtitle: "Enhance your natural beauty with our makeup artists",
         src: "https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D",
         alt: "Opulent Makeup Studio",
@@ -408,6 +433,8 @@ const listingCardItem = [
     {
         listingId: 16,
         title: "Pristine Nails & Spa",
+        slug:'Pristine-Nails-Spa',
+
         subtitle: "Treat yourself to a day of pampering",
         src: "https://images.unsplash.com/photo-1626383120723-2a941488860d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
         alt: "Pristine Nails & Spa",
@@ -442,6 +469,8 @@ const listingCardItem = [
     {
         listingId: 17,
         title: "Queen's Beauty Boutique",
+        slug:'Queen-Beauty-Boutique',
+
         subtitle: "Discover your inner royalty with our beauty treatments",
         src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
         alt: "Queen's Beauty Boutique",
@@ -469,6 +498,8 @@ const listingCardItem = [
     {
         listingId: 18,
         title: "Radiant Skin Spa",
+        slug:'Radiant-Skin-Spa',
+
         subtitle: "Restore your glow with our skincare experts",
         src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Radiant Skin Spa",
@@ -496,6 +527,8 @@ const listingCardItem = [
     {
         listingId: 19,
         title: "Serenity Salon & Spa",
+        slug:'Serenity-Salon-Spa',
+
         subtitle: "Escape to tranquility with our spa services",
         src: "https://plus.unsplash.com/premium_photo-1664537435399-32896b18c559?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D",
         alt: "Serenity Salon & Spa",
@@ -523,6 +556,8 @@ const listingCardItem = [
     {
         listingId: 20,
         title: "Tranquil Wellness Center",
+        slug:'Tranquil-Wellness-Center',
+
         subtitle: "Nurture your body, mind, and soul",
         src: "https://images.unsplash.com/photo-1599387737838-660b75526801?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8",
         alt: "Tranquil Wellness Center",
@@ -550,6 +585,8 @@ const listingCardItem = [
     {
         listingId: 21,
         title: "Glass store",
+        slug:'Glass-store',
+
         subtitle: "Where sophistication meets style",
         src: "https://images.unsplash.com/photo-1593702295094-aea22597af65?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8",
         alt: "Ultimate Grooming Lounge",

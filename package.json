@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-select": "^2.0.0",
@@ -19,16 +22,19 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "date-fns": "^3.6.0",
-    "embla-carousel-react": "^8.0.3",
+    "embla-carousel-react": "^8.0.4",
     "lucide-react": "^0.368.0",
     "next": "14.2.1",
     "node": "^18.20.2",
+    "prop-types": "^15.8.1",
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-lazyload": "^3.2.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
+    "use-debounce": "^10.0.0",
+    "vaul": "^0.9.1",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
