@@ -14,31 +14,31 @@ import CategoryList from "./_components/category/CategoryList";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
-    setTimeout(() => {
-        setIsLoading(true)
-    },1000)
+  setTimeout(() => {
+    setIsLoading(true)
+  }, 1000)
   return (
-   <>
-    {
-isLoading ? (
-  <>
-      <CategoryModal />
-      <section className='my-3 absolute  w-full mx-auto z-20'>
-      <Header />
-      </section>
-      <SearchPlace />
-      {/* <Category /> */}
-      {/* <CategoryList /> */}
-      <Listings />
-      <Blog />
-      <Feelback />
-      <Footer />
+    <>
+      {
+        isLoading ? (
+          <>
+            <CategoryModal />
+            <section className='my-3 absolute  w-full mx-auto z-20'>
+              <Header />
+            </section>
+            <SearchPlace />
+            {/* <Category /> */}
+            {/* <CategoryList /> */}
+            <Listings />
+            <Blog />
+            <Feelback />
+            <Footer />
+          </>
+        ) : (
+          <Loading />
+        )
+      }
     </>
-) : (
-  <Loading />
-)
-   }
-   </>
-   
+
   );
 }
