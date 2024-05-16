@@ -25,10 +25,9 @@ const BlogPostCard = ({
         <>
 
             <div className='
-        border-2 border-x-primary-foreground 
+         
         flex flex-col justify-between items-start gap-1
-        max-w-sm min-w-[375px] md:w-[300px] h-[400px] 
-        shadow-lg 
+        max-w-sm min-w-[280px] md:w-[300px] h-[400px] 
         relative
         overflow-hidden
         cursor-pointer
@@ -36,7 +35,7 @@ const BlogPostCard = ({
         '
         key={id}>
             {/* image */}
-            <div className='w-full flex-none h-[200px] overflow-hidden '>
+            <div className='w-full flex-none h-[200px] overflow-hidden rounded-t-md '>
                 <Link 
                 href={"/blog/"+slug || '/'}
                 className='w-full'

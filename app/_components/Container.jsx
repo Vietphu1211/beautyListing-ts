@@ -5,7 +5,7 @@ const Container = ({
 }) => {
   return (
     <div
-    className=' container relative mx-auto w-12/12 h-auto py-5 px-0'
+    className=' container relative w-12/12 md:w-10/12 lg:9/12 xl:8/12 h-auto p-0'
     >{children}</div>
   )
 }

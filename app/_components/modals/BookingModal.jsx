@@ -61,12 +61,12 @@ const BookingModal = () => {
 }  
 return (
     <Drawer>
-      <DrawerTrigger>Đặt lịch hẹn</DrawerTrigger>
-      <div className="w-6/12">
+      <DrawerTrigger>Đặt lịch hẹn </DrawerTrigger>
+      <div className="w-12/12">
         <DrawerContent>
           {/* Modal header */}
           <DrawerHeader>
-            <DrawerTitle>Đặt lịch hẹn</DrawerTitle>
+            <DrawerTitle> Đặt lịch hẹn </DrawerTitle>
             <DrawerDescription>
               <p>
                 Chọn thời gian và dịch vụ

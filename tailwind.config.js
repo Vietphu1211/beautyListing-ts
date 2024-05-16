@@ -24,11 +24,12 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#228077",
+          // DEFAULT: "#228077",
+          DEFAULT: "#d93c23",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#009faa",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {

@@ -4,9 +4,14 @@ import ListingCard from './ListingCard'
 import Container from '../Container'
 import Heading from '../Heading'
 import SlidingHandleButton from '../SlidingHandleButton'
+import getListingData from '@/app/_data/getListingData'
 
 const Listings = () => {
   const listRef = useRef(null)
+
+  const listingData = getListingData
+  const filterListingdata = listingData.filter(listing=>listing.badge.includes('nổi bật'));
+
   const scrollRightHandle = () => {
     console.log('hello')
     if(listRef.current) {
@@ -37,7 +42,26 @@ const Listings = () => {
             className='flex flex-row justify-start items-center gap-2 overflow-x-auto md:overflow-hidden py-5 '
             ref={listRef}
           >
-            <ListingCard />
+
+          {
+            filterListingdata?.map(filterListing =>(
+
+              <ListingCard 
+              key={filterListing.listingId}
+              title={filterListing.title}
+              subtitle={filterListing.subtitle}
+              slug={filterListing.slug}
+              src={filterListing.src}
+              alt={filterListing.alt}
+              addressOfStore={filterListing.addressOfStore}
+              reviewOfStore={filterListing.reviewOfStore}
+              badge={filterListing.badge || ''}
+              
+            />
+            )
+            )
+          }
+            
           </div>
           <SlidingHandleButton 
             scrollLeftHandle={()=> scrollLeftHandle()}

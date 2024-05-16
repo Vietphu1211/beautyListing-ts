@@ -1,8 +1,9 @@
 import { serviceData } from '@/app/_data/serviceData'
 import Link from 'next/link'
 import { Search, SquareCheck } from 'lucide-react';
-import listingCardItem from '@/app/_data/listingData';
+import listingCardItem from '@/app/_data/getListingData';
 import Image from 'next/image';
+import { Suspense } from 'react';
 
 const SearchResultBox = ({
     query,
@@ -24,20 +25,23 @@ const SearchResultBox = ({
     // console.log("alo check>>"+stringQuery)
    
     return (
-        <div className='w-full'>
+        <div className='w-full md:w-6/12 flex flex-col gap-5 mt-5'>
             {/* div này thể hiện những tìm kiếm gần đây */}
             <div>
                 <h3 className='font-normal text-sm md:font-semibold md:text-base'>{serviceLabel}</h3>
                 {/* chổ này để render những gì user đã search mới nhất */}
-                <div className=' w-3/12 '>
+                <div className=' w-3/12 mt-2'>
                     {filteredServiceData && filteredServiceData.map((service, index) => (
-                        <Link key={index} href={service.slug}
+                       
+                       <Link key={index} href={service.slug}
                             className='text-sm whitespace-nowrap flex flex-row items-center gap-2'>
                             {/* <SquareCheck  className='mx-1 text-neutral-500 text-sm'/> */}
                             <Search  className='w-5 h-5'/>
                             {service.title}
 
                         </Link>
+                    
+                        
                     ))}
                 </div>
             </div>
