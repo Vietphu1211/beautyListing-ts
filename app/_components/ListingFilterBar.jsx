@@ -9,10 +9,10 @@ const ListingFilterBar = () => {
   // const {isScrolled, disableScroll} = useScrollEffect(500, 1000)/**Đặt threshold =500 pixel */
 
   return (
-    <div className='relative hidden lg:block flex-none w-3/12  
+    <div className='relative flex-none w-12/12  
           '>
           {/* parent div chứa filter, đặt relative cho div cha và đặt sticky cho div con để di chuyển cùng khi scroll */}
-            <div className={`flex flex-col border-[1px] border-neutral-300 shadow-md bg-gray-50 text-black rounded-md h-min px-4 py-2
+            <div className={`flex flex-col   text-black rounded-md h-min w-8/12 mx-auto my-5
              sticky top-0 z-10
             `}>
             {/* chilren div */}

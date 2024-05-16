@@ -14,17 +14,16 @@ import {
 export function OrderBy() {
   return (
     <Select>
-    <SelectTrigger className="w-[180px]">
-      <SelectValue placeholder="Sắp xếp theo:" />
+    <SelectTrigger className="w-[130px]">
+      <SelectValue className="text-sm" placeholder="Sắp xếp theo:" />
     </SelectTrigger>
     <SelectContent>
       <SelectGroup>
-        <SelectLabel>Fruits</SelectLabel>
-        <SelectItem value="apple">Apple</SelectItem>
-        <SelectItem value="banana">Banana</SelectItem>
-        <SelectItem value="blueberry">Blueberry</SelectItem>
-        <SelectItem value="grapes">Grapes</SelectItem>
-        <SelectItem value="pineapple">Pineapple</SelectItem>
+        <SelectLabel>Sắp xếp theo</SelectLabel>
+        <SelectItem value="apple">Đánh giá từ cao nhất</SelectItem>
+        <SelectItem value="banana">Giá tốt nhất</SelectItem>
+        <SelectItem value="blueberry">Giá cao nhất</SelectItem>
+        <SelectItem value="grapes">Khu vực gần đây</SelectItem>
       </SelectGroup>
     </SelectContent>
   </Select>

@@ -14,7 +14,7 @@ import Container from "./Container"
 export function BreadcrumbCollapsed() {
     return (
         <Container>
-        <div className="border-b-[0.5px] border-neutral-200 shadow-sm px-4">
+        <div className="  px-4 my-5">
         <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import {
     Carousel,
     CarouselContent,
@@ -6,12 +7,24 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image"
+import SearchForm from "../search/SearchForm"
 
 const ServiceCarousel = () => {
     return (
-        <Carousel>
+       <>
+       <div className='flex flex-row justify-end w-10/12 mx-auto h-8 mb-4
+                    md:6/12
+                    
+                    '>
+                      <SearchForm
+                        placeholder='tìm kiếm dịch vụ'
+                        onChange={() => { }}
+                        defaultValue={""}
+                      />
+                    </div>
+         <Carousel>
             <CarouselContent>
-                {/* render danh mục dịch vụ của một business tại đây, mỗi carouselitem là 1 dịch vụ */}
+                {/* render danh mục dịch vụ của một business tại đây, mỗi carouselitem là 1 dịch vụ , đặt key ở mỗi CarouselItem*/}
                 <CarouselItem className="md:basis-1/3 lg:basis-1/4 shadow-md">
                     <div className='border-[1px] rounded-md'>
                         <div className="">
@@ -24,9 +37,9 @@ const ServiceCarousel = () => {
                                     className="object-cover w-full"
                                 />
                             </div>
-                            <div className='flex flex-col justify-between border-b-[1px] p-2'>
+                            <div className='flex flex-col justify-between  p-2'>
                                 <div className="flex flex-row justify-between">
-                                <p className="">Regular cut </p>
+                                    <p className="">Regular cut </p>
                                     <p className="text-primary text-base font-medium">$35.00</p>
                                 </div>
                                 <div className="block">
@@ -54,7 +67,7 @@ const ServiceCarousel = () => {
                             </div>
                             <div className='flex flex-col justify-between border-b-[1px] p-2'>
                                 <div className="flex flex-row justify-between">
-                                <p className="">Regular cut </p>
+                                    <p className="">Regular cut </p>
                                     <p className="text-primary text-base font-medium">$35.00</p>
                                 </div>
                                 <div className="block">
@@ -82,7 +95,7 @@ const ServiceCarousel = () => {
                             </div>
                             <div className='flex flex-col justify-between border-b-[1px] p-2'>
                                 <div className="flex flex-row justify-between">
-                                <p className="">Regular cut </p>
+                                    <p className="">Regular cut </p>
                                     <p className="text-primary text-base font-medium">$35.00</p>
                                 </div>
                                 <div className="block">
@@ -110,7 +123,7 @@ const ServiceCarousel = () => {
                             </div>
                             <div className='flex flex-col justify-between border-b-[1px] p-2'>
                                 <div className="flex flex-row justify-between">
-                                <p className="">Regular cut </p>
+                                    <p className="">Regular cut </p>
                                     <p className="text-primary text-base font-medium">$35.00</p>
                                 </div>
                                 <div className="block">
@@ -138,7 +151,7 @@ const ServiceCarousel = () => {
                             </div>
                             <div className='flex flex-col justify-between border-b-[1px] p-2'>
                                 <div className="flex flex-row justify-between">
-                                <p className="">Regular cut </p>
+                                    <p className="">Regular cut </p>
                                     <p className="text-primary text-base font-medium">$35.00</p>
                                 </div>
                                 <div className="block">
@@ -157,6 +170,9 @@ const ServiceCarousel = () => {
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
+
+        <Button variant='outline' className="border border-secondary mt-4">Xem tất cả</Button>
+       </>
     )
 }
 

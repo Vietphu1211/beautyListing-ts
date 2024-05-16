@@ -1,12 +1,15 @@
 import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react'
-import React, { useRef } from 'react'
+
 
 const SlidingHandleButton = ({
     scrollLeftHandle,
-    scrollRightHandle
+    scrollRightHandle,
+  
 }) => {
+  
   return (
-    <div className='flex flex-row gap-3 justify-end items-center z-20'>
+    <div className={`flex flex-row gap-3 justify-end items-center z-20
+    `}>
           
                 <ArrowLeftCircle 
                      className='hidden md:block text-neutral-700 cursor-pointer hover:text-primary'

@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <>
       <hr />
-      <section className='bg-primary text-white dark:text-dark'>
+      <section className='bg-neutral-800 text-white dark:text-dark'>
 
         <Container>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-y-10 py-3 my-5'>
@@ -52,7 +52,7 @@ const Footer = () => {
               </div>
               <div className="flex w-full max-w-sm items-center space-x-2">
                 <Input type="email" placeholder="Email" className="focus-within:text-sm" />
-                <Button type="submit" className="bg-black border-0 " variant="outline">Subscribe</Button>
+                <Button type="submit" >Subscribe</Button>
               </div>
             </div>
 

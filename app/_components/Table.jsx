@@ -1,5 +1,5 @@
 import React from 'react'
-import listingCardItem from '../_data/listingData'
+import listingCardItem from '../_data/getListingData'
 
 const  CateTable = async({
     query,

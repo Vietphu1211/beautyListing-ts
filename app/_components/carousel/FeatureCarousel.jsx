@@ -15,7 +15,7 @@ const CustomCarousel = ({
     className
 }) => {
     return (
-        <Carousel>
+        <Carousel >
             <CarouselContent>
                 <CarouselItem key={key}>
                 <Image
@@ -23,13 +23,35 @@ const CustomCarousel = ({
                         alt={alt}
                         width={500}
                         height={350}
-                        className={className}
+                        className="w-12/12 "
                     />
+    
+                    
+                </CarouselItem>
+                <CarouselItem key={key} >
+                <Image
+                        src={src}
+                        alt={alt}
+                        width={500}
+                        height={350}
+                        className="w-full"
+                    />
+                    
+                </CarouselItem>
+                <CarouselItem key={key} >
+                <Image
+                        src={src}
+                        alt={alt}
+                        width={500}
+                        height={350}
+                        className="w-full"
+                    />
+                    
                 </CarouselItem>
 
             </CarouselContent>
-            {/* <CarouselPrevious />
-            <CarouselNext /> */}
+            <CarouselPrevious />
+            <CarouselNext />
         </Carousel>
     )
 }

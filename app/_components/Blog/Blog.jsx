@@ -31,14 +31,7 @@ const Blog = () => {
     }
   }
 
-  // const handleCheck = (item) => {
-  //   getblogPost.map((item) => {
-
-  //     console.log(item.slug)
-  //     // return item;
-  //   })
-  // }
-
+ 
   const router = useRouter();
     const goToPost = (slug) => {
         router.push(`/${slug}`)
@@ -61,7 +54,7 @@ const Blog = () => {
         subtitle="Read all blogposts from here"
       />
       {/* <button onClick={handleCheck}>Check button</button> */}
-      <div ref={listRef} className="flex flex-row justify-start items-center gap-2 overflow-x-auto  md:overflow-hidden py-5">
+      <div ref={listRef} className="flex flex-row justify-start items-center gap-2 overflow-x-auto  md:overflow-hidden md:py-5">
         {getblogPost && getblogPost.map((blogItem) => (
           <>
             {isLoading ? (

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog"
 
 
-const SearchDialog = ({
+const FilterDialog = ({
     title,
     label,
     description
@@ -16,7 +16,7 @@ const SearchDialog = ({
 }) => {
     return (
         <Dialog className="shadow-xl border border-black">
-            <DialogTrigger className="w-full ">{label}</DialogTrigger>
+            <DialogTrigger>{label}</DialogTrigger>
             <DialogContent className="h-full ">
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
@@ -29,4 +29,4 @@ const SearchDialog = ({
     )
 }
 
-export default SearchDialog
+export default FilterDialog

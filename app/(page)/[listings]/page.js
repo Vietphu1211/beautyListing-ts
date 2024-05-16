@@ -1,5 +1,6 @@
 'use client'
 
+import '../../(page)/[listings]/listings.modules.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,12 +14,12 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Slider } from "@/components/ui/slider"
 import Listings from '@/app/_components/listings/Listings'
 import ListingCard from '@/app/_components/listings/ListingCard'
-import listingCardItem from '@/app/_data/listingData'
+import listingCardItem from '@/app/_data/getListingData'
 import { MapPin, SquarePlus, Star } from 'lucide-react'
 import { Pagination } from '@/components/ui/pagination'
 import { PaginationComponent } from '@/app/_components/pagination/Pagination'
 import SearchBooking from '@/app/_components/search/SearchBooking'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { updateCategoryInURL } from '@/app/_lib/utils'
 import Category from '@/app/_components/category/Category'
 import ListingFilterBar from '@/app/_components/ListingFilterBar'
@@ -27,12 +28,19 @@ import Modal from '@/app/_components/modals/Modal'
 import { locationdata } from '@/app/_data/locationdata'
 import CategoryList from '@/app/_components/category/CategoryList'
 
+import { Button } from "@/components/ui/button"
+import FilterDialog from '@/app/_components/dialog/FilterDialog'
+
+
+
 
 const ListingPage = () => {
   const getListingData = listingCardItem
   const getLocationData = locationdata
+  const getCategoryData = listingCategoryItem
 
   const [category, setCategory] = useState('all');
+  const reflist = useRef();
   const params = useSearchParams();
  useEffect(()=> {
 setCategory(params.get('category'))
@@ -75,35 +83,45 @@ setCategory(params.get('category'))
 
   return (
     <>
+     <section className="bg-neutral-800 pt-5">
       <Header />
-      { isopen && 
-      <Modal 
-       modalHandleClose={()=> modalHandleClose() }
-        title="vui lòng chọn địa điểm hoặc cửa hàng"
-        body={body}
-        
+      <div className='flex flex-col justify-center my-2'>
+            <div
+                ref={reflist}
+                className=' flex flex-row justify-center items-center gap-2 overflow-x-auto
+                 lg:overflow-hidden md:h-20'>
+                {getCategoryData && getCategoryData.map((cate) => (
 
-
-      />}
-      <Container>
-        {/* search */}
-        <div className='sticky md:relative top-0 z-20 bg-white px-4 py-2 shadow-md md:shadow-none'
-        onClick={()=>modalHandleOpen()}
-        >
-          <SearchBooking 
-            className="flex"
-          />
+                    <Link href={cate.slug} key={cate.id} 
+                        className='flex flex-col justify-center items-center gap-1 min-w-[110px] rounded-md py-1 px-0 md:py-1 md:px-1 hover:-translate-y-2 duration-500'
+                    >
+                        <p className='text-sm font-semibold line-clamp-1 text-neutral-100 shadown-sm'>{cate.title}</p>
+                    </Link>
+                ))
+                }
+            </div>
         </div>
-        {/* category */}
-        {/* <Category /> */}
-        <CategoryList/>
+     </section>
+      <Container>
         {/* order by: */}
-        <OrderBy />
+       <div className='flex flex-row justify-end items-center gap-4 -translate-y-[12px]'>
+       <FilterDialog 
+         labelDialogStyle="w-full border border-black"
+          label= {(
+            <div className='flex flex-row items-center gap-2 justify-between md:justify-end mb-4'>
+            <Button variant="outline" className="border-neutral-500 border mt-4">Lọc nâng cao</Button>
+            </div>
+          )}
+          description={(<ListingFilterBar />)}
+        />
+            <OrderBy />
+       </div>
+        
         
         {/* filter & listings */}
         <div className='flex flex-row gap-2'>
           {/* filter */}
-          <ListingFilterBar />
+          {/* <ListingFilterBar /> */}
           {/* listings */}
           <div className='flex-auto overflow-hidden'>
             <div className='flex flex-col justify-center gap-1 items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
@@ -123,7 +141,8 @@ setCategory(params.get('category'))
                             height={40}
                           />
                         </div>
-                        <Link href='/'
+                        {/* lấy link theo theo id của listing */}
+                        <Link href='/listing/alpha'
                           className='cursor-pointer h-full'>
                           <Image
                             alt={listing.alt}

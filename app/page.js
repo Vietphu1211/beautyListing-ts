@@ -1,44 +1,56 @@
 'use client'
 import Listings from "./_components/listings/Listings";
-import SearchPlace from "./_components/search/SearchPlace";
+import SearchPlace from "./_components/hero/Hero";
 import Blog from "./_components/Blog/Blog";
 import Loading from "./Loading";
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import Header from "./_components/header/Header";
 import Footer from "./_components/footer/Footer";
 import CategoryModal from "./_components/modals/CategoryModal";
 import Feelback from "./_components/feelback/Feelback";
-import CategoryList from "./_components/category/CategoryList";
+import Introduction from "./_components/introduction/Introduction";
 
 
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
-    setTimeout(() => {
-        setIsLoading(true)
-    },1000)
+  setTimeout(() => {
+    setIsLoading(true)
+  }, 400)
+
+  const [scrollPositionY, setScrollPositionY] = useState({top:0})
+  useEffect(()=>{
+    const handleScroll = ()=>{
+      // write something
+      const newScrollPosition = {top: window.scrollY || document.documentElement.scrollTop}
+      setScrollPositionY(newScrollPosition)
+      console.log('hello',newScrollPosition)
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+
+  },[])
   return (
-   <>
-    {
-isLoading ? (
-  <>
-      <CategoryModal />
-      <section className='my-3 absolute  w-full mx-auto z-20'>
-      <Header />
-      </section>
-      <SearchPlace />
-      {/* <Category /> */}
-      {/* <CategoryList /> */}
-      <Listings />
-      <Blog />
-      <Feelback />
-      <Footer />
+    <>
+      {
+        isLoading ? (
+          <main className="relative">
+            <div className={`${scrollPositionY.top <= 50 ? 'absolute':'bg-neutral-800 sticky md:absolute py-3'} top-0 my-3 absolute   w-full mx-auto z-50`}>
+              <Header />
+            </div>
+            <SearchPlace />
+            <Listings />
+            <Introduction />
+            <Blog />
+            <Feelback />
+            <Footer />
+          </main>
+        ) : (
+          <Loading />
+        )
+      }
     </>
-) : (
-  <Loading />
-)
-   }
-   </>
-   
+
   );
 }

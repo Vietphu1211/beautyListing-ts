@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Suspense, useState } from 'react'
 import Navbar from './Navbar'
 import UserMenu from './UserMenu'
-import { ArrowLeft, ArrowLeftToLine, Heart, Search } from 'lucide-react';
+import { CornerUpLeft, Heart, Search } from 'lucide-react';
 import Image from 'next/image'
 
 import listNavItem from '@/app/_data/navItem'
@@ -71,15 +71,13 @@ const Header = () => {
                 onBlur={() => setIsOpenResultBox(false)}
                 defaultValue={() => { }}
             />
-            <Suspense key={query} fallback={<PostCardSkeleton />}>
-                    <SearchResultBox
-                        query={query}
-                        serviceLabel='Kết quả tìm kiếm theo dịch vụ'
-                        recomendedLabel='Gợi ý tìm kiếm'
-                        businessLabel='Kết quả tìm kiếm theo cửa hàng '
-                    />
-            </Suspense>
-            
+            <SearchResultBox
+                query={query}
+                serviceLabel='Kết quả tìm kiếm theo dịch vụ'
+                recomendedLabel='Gợi ý tìm kiếm'
+                businessLabel='Kết quả tìm kiếm theo cửa hàng '
+            />
+
         </>
     )
     const label = (
@@ -96,15 +94,17 @@ const Header = () => {
         </div>
     )
     const title = (
-        <>
-            <ArrowLeftToLine />
-        <h2>Tìm kiếm</h2>
-        </>
+        <div className='flex flex-row justify-start items-center gap-5 mb-5'>
+            <CornerUpLeft className='w-8 h-8 font-normal' />
+            <h2 className='font-medium text-xl'>Tìm kiếm</h2>
+        </div>
     )
 
     return (
-        <Container>
-            <div className='flex flex-row justify-around md:flex-col md:justify-between items-center gap-2 '>
+        <>
+            <div className='flex flex-row justify-start items-center gap-5
+            md:flex-col md:justify-around md:items-center  '>
+                {/* logo */}
                 <Link href='/'>
                     <Image
                         alt='logo'
@@ -115,38 +115,11 @@ const Header = () => {
                     />
                 </Link>
 
-                {/* search bar */}
-                <div
-                    className='flex-none w-9/12 md:flex-auto mx-2 md:w-6/12'
-                >
-                    <DialogComponent
-                        title={title}
-                        description={description}
-                        label={label}
 
-                    />
-                    {/* <SearchForm
-                    placeholder="Tìm kiếm dịch vụ hoặc cửa hàng..."
-                    onChange={(e)=>{handleChange(e.target.value)}}
-                   onClick={()=>{}}
-                //    onBlur={()=>setIsOpenResultBox(false)}
-                    defaultValue={()=>{}}
-                /> */}
-
-                    {/* <Suspense key={query } fallback={<PostCardSkeleton />}>
-                   
-                   {isOpenResultBox && (
-                    <SearchResultBox
-                            query={query}
-                        />
-                   )}
-                   
-                    </Suspense> */}
-                </div>
 
                 {/* navbar and user menu */}
 
-                <div className='flex flex-row gap-5 justify-center items-center'>
+                <div className='flex flex-row gap-5 justify-start items-center'>
                     <Navbar />
                     <div className='hidden md:flex flex-row justify-center items-center gap-3 text-white '>
                         <Link href='/login' className='border-r-2 hover:text-primary'>
@@ -166,7 +139,21 @@ const Header = () => {
 
                     />
                 </div>
+
+                {/* search bar */}
+                <div
+                    className='flex flex-col justify-center w-[320px] mx-2 md:flex-none  md:w-[550px] md:mx-auto '
+                >
+                    <DialogComponent
+                        title={title}
+                        description={description}
+                        label={label}
+
+                    />
+                </div>
             </div>
+
+            {/* Dropdown menu */}
             {isOpenMenu && (
                 <div className='bg-neutral-100 flex flex-col justify-center items-center gap-5 py-5 rounded-md absolute w-full left-0 text-sm z-20'>
                     {navItem.map((item, index) => (
@@ -186,7 +173,7 @@ const Header = () => {
                     </div>
                 </div>
             )}
-        </Container>
+        </>
     )
 }
 
