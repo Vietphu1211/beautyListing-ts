@@ -1,26 +1,56 @@
 export const serviceData = [
     {
+        serviceId:1,
         title:"Úp móng tay",
-        slug:"up-mong-tay"
+        slug:"up-mong-tay",
+        src:"https://images.unsplash.com/photo-1630843599725-32ead7671867?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmFpbHxlbnwwfDB8MHx8fDA%3D",
+        priceOfService:150000,
+        timeOfService:25,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
     {
+        serviceId:2,
         title:"Vẽ Nail Art",
-        slug:"ve-nail-art"
+        slug:"ve-nail-art",
+        src:"https://plus.unsplash.com/premium_photo-1682089222636-528a24c2bc46?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        priceOfService:150000,
+        timeOfService:25,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
-    {
+    {   
+        serviceId:3,
         title:"Cắt tóc nam",
         slug:"cat-toc-nam",
+        src:"https://plus.unsplash.com/premium_photo-1661632701774-bffbcf314a5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        priceOfService:300000,
+        timeOfService:35,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
     {
+        serviceId:4,
         title:"Làm tóc nữ",
         slug:"lam-toc-nu",
+        src:"https://images.unsplash.com/photo-1508785166660-30ce4484f45c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        priceOfService:200000,
+        timeOfService:45,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
     {
+        serviceId:5,
         title:"Massage chân",
         slug:"massage-chan",
+        src:"https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        priceOfService:300000,
+        timeOfService:60,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
     {
+        serviceId:6,
         title:"trang điểm cô dâu",
-        slug:"trang-diem-co-dau"
+        slug:"trang-diem-co-dau",
+        src:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        priceOfService:100000,
+        timeOfService:20,
+        descriptionOfService:"Dịch vụ gel nail tại sunnay nail room với thời gian thực hiện 25 phút, đắp bột thay móng, sơn màu",
     },
 ]

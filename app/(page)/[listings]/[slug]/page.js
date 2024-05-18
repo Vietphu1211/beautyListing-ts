@@ -25,22 +25,22 @@ const DetailListingPage = () => {
   const reflist = useRef();
 
 
- 
+
   return (
     <>
       <main id='topPage' className="relative px-3">
-        <div  className='hidden md:block bg-neutral-800 py-5'>
+        <div className='hidden md:block bg-neutral-800 py-5'>
           <Header />
         </div>
         {/* <div  className={`${scrollPositionY.top <= 50 ? 'absolute':'bg-neutral-800 sticky md:absolute py-3'} top-0 my-3 absolute   w-full mx-auto z-50`}>
         </div> */}
-        <Container>   
-            <Mainsection />
-            <BreadcrumbCollapsed />
+        <Container>
+          <Mainsection />
+          <BreadcrumbCollapsed />
         </Container>
       </main>
       <Footer />
-        <Ctabtn />
+      <Ctabtn />
       <BackToTopButton />
 
     </>
