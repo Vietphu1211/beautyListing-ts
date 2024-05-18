@@ -105,7 +105,7 @@ const Header = () => {
             <div className='flex flex-row justify-start items-center gap-5
             md:flex-col md:justify-around md:items-center  '>
                 {/* logo */}
-                <Link href='/'>
+                <Link href={'/'}>
                     <Image
                         alt='logo'
                         src='/logo.svg'
