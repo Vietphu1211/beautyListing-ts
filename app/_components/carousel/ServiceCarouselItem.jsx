@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { CarouselItem } from '@/components/ui/carousel'
-import { useToast } from "@/components/ui/use-toast"
 
 
 import Image from 'next/image'
@@ -16,7 +15,6 @@ const ServiceCarouselItem = ({
     handleClick
 
 }) => {
-    const { toast } = useToast()
     return (
         <>
             <CarouselItem key={serviceId}
@@ -44,12 +42,7 @@ const ServiceCarouselItem = ({
                                 </p>
                                 <Button
                                     variant="outline"
-                                    onClick={() => {
-                                        toast({
-                                            title: "Đã được thêm vào danh sách",
-                                            description: "Friday, February 10, 2023 at 5:57 PM",
-                                        })
-                                    }}
+                                    onClick={handleClick}
                                 >
                                     Chọn
                                 </Button>

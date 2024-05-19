@@ -23,14 +23,15 @@ import { serviceData } from "@/app/_data/serviceData"
 import ServiceCarouselItem from "./ServiceCarouselItem"
 import { useState } from "react"
 
+import { useToast } from "@/components/ui/use-toast"
+
+
 const ServiceCarousel = () => {
 
     const serviceDateJson = serviceData;
+
+    // const { toast } = useToast()
     
-
-    
-
-
     return (
         <>
             <div className='flex flex-row justify-end w-10/12 mx-auto h-8 mb-4
@@ -49,13 +50,14 @@ const ServiceCarousel = () => {
                     {serviceDateJson?.map((service) => (
                         <ServiceCarouselItem
                             key={service.serviceId}
+                            id={service.serviceId}
                             title={service.title}
                             // descriptionOfService={service.descriptionOfService}
                             serviceId={service.serviceId}
                             src={service.src}
                             priceOfService={service.priceOfService}
                             timeOfService={service.timeOfService}
-                            handleClick={() => handleServiceOpen()}
+                            // handleClick={(service)=>handleClick(service)}
 
                         />
 
@@ -68,8 +70,8 @@ const ServiceCarousel = () => {
                 <CarouselNext />
             </Carousel>
 
-            <p 
-            className=" mt-4">Xem thêm</p>
+            {/* <p 
+            className=" mt-4">Xem thêm</p> */}
            
         </>
     )
