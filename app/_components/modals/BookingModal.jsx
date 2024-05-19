@@ -20,9 +20,10 @@ import { CarouselItem } from "@/components/ui/carousel"
 
 const STEPS = {
   SERVICE: 0,
-  DATE: 1,
-  TIME: 2,
-  CONFIRM:3,
+  PRICE: 1,
+  DATE: 2,
+  TIME: 3,
+  CONFIRM:4,
 }
 
 
@@ -40,6 +41,8 @@ const BookingModal = () => {
     switch (step) {
       case STEPS.SERVICE:
         return <ServiceStep/>;
+      case STEPS.PRICE:
+        return <PriceStep />;
       case STEPS.DATE:
         return <DateStep />;
       case STEPS.TIME:
@@ -69,9 +72,6 @@ const handleSubmit = () => {
       setCurrentStep(currentStep - 1);
     }
   }
-
-
-
 
   useEffect(() => {
     getTime();
@@ -110,9 +110,10 @@ const handleSubmit = () => {
 }  
 
 
-const ServiceStep = ()=> (
-  <>
+const ServiceStep = ({service, onRemove, onAdd})=> (
+  <div className="flex flex-col justify-center gap-5">
     <h2>Hãy chọn dịch vụ có trong danh sách dưới đây</h2>
+    {/* <div className="flex flex-col gap-2">
     {serviceDateJson?.map((service) => (
                         <div key={service.serviceId}
                         
@@ -120,16 +121,29 @@ const ServiceStep = ()=> (
                           <h3>{service.title}
                           <span className="text-neutral-500 text-sm"> {service.priceOfService}</span>
                           </h3>
-                          <div className="flex flex-row gap-2 "><Button variant="outline">+</Button>
-                          <Button variant="outline">-</Button></div>
+                          <div className="flex flex-row gap-2 ">
+                          <Button variant="outline"
+                          onClick={()=>onRemove(service.serviceId)}
+                          >+</Button>
+                          <Button variant="outline"
+                          onClick={()=>onAdd(service.serviceId)}
+                          >-</Button></div>
 
                         </div>
 
 
                     ))}
-  </>
+
+    </div> */}
+  </div>
 )
 
+const PriceStep = () => (
+  <>
+    <h2>Tổng tiền là:</h2>
+  
+  </>
+)
 
 const DateStep = () => (
   
@@ -188,24 +202,23 @@ const ConfirmStep = () => (
 
   </>
 )
+
 return (
     <Drawer>
       <DrawerTrigger>Đặt lịch hẹn </DrawerTrigger>
-      <div className="w-12/12">
-        <DrawerContent>
+      <div className="w-12/12 flex flex-col justify-center items-center">
+        <DrawerContent >
           {/* Modal header */}
-          <DrawerHeader>
-            <DrawerTitle> Đặt lịch hẹn </DrawerTitle>
-            <DrawerDescription>
-              <p>
-                Chọn thời gian và dịch vụ
-              </p>
+          <DrawerHeader >
+            <DrawerTitle className="text-center text-primary font-bold text-2xl" > Đặt lịch hẹn </DrawerTitle>
+            <DrawerDescription className="text-center">
+
             </DrawerDescription>
           </DrawerHeader>
 
 
           {/* Modal body*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 w-6/12 mx-auto gap-10">
+          <div className="flex flex-col justify-center items-center w-11/12 md:w-6/12 mx-auto">
             
             {/* dùng hàm renderStepContent và truyền vào thông số currentStep để render component tương ứng */}
             {renderStepContent(currentStep)}

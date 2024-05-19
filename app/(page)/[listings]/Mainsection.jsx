@@ -184,6 +184,7 @@ const Mainsection = () => {
                       <h4>Dịch vụ phổ biến</h4>
                     </AccordionTrigger>
                     <AccordionContent>
+                    
                       {/* Danh sách các dịch vụ tại cửa hàng nằm ở ServiceCarousel */}
 
                       <ServiceCarousel />
