@@ -95,7 +95,7 @@ const Header = () => {
     )
     const title = (
         <div className='flex flex-row justify-start items-center gap-5 mb-5'>
-            <CornerUpLeft className='w-8 h-8 font-normal' />
+            {/* <CornerUpLeft className='w-8 h-8 font-normal' /> */}
             <h2 className='font-medium text-xl'>Tìm kiếm</h2>
         </div>
     )

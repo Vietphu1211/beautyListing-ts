@@ -55,6 +55,7 @@ const Listings = () => {
               alt={filterListing.alt}
               addressOfStore={filterListing.addressOfStore}
               reviewOfStore={filterListing.reviewOfStore}
+              numberOfReviews={filterListing.numberOfReviews}
               badge={filterListing.badge || ''}
               
             />

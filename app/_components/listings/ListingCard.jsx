@@ -16,6 +16,7 @@ const ListingCard = ({
     alt,
     addressOfStore,
     reviewOfStore,
+    numberOfReviews,
     badge
 }) => {
     return (
@@ -24,7 +25,7 @@ const ListingCard = ({
             {/* div headCard */}
             <div className='relative flex flex-none h-[200px] w-full group transition-all duration-300 overflow-hidden'>
                 {/* Dùng flex-none và set height cố định để phần hình ảnh không giãn nở theo độ cao của ảnh */}
-                <div className='absolute left-60 top-3  z-20'>
+                <div className='absolute left-72 md:left-60 top-3  z-20'>
                     {/* <Heart strokeWidth={1}
                                     className='listing__favourite w-full text-white  transition-all duration-300 '
                                     width={40}
@@ -73,10 +74,10 @@ const ListingCard = ({
                     <Star className='text-yellow-400 inline-block' /></span>
                 <p className='text-sm font-light rounded-md py-0 px-1'>
                     <span className='text-orange-700 font-bold'>
-                        252 </span>
+                        {numberOfReviews} </span>
                     reviews
                 </p>
-                <Link href='/' className='font-normal border-l-[1px] pl-2' ><p>Xem thêm</p></Link>
+                <Link href={`listings/${slug}`} className='font-normal border-l-[1px] pl-2' ><p>Xem thêm</p></Link>
 
             </div>
         </div>
