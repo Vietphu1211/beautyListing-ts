@@ -159,7 +159,7 @@ const Mainsection = () => {
               <div className='mt-3'>
 
                 <h3>Mô tả</h3>
-                <p>Booksy guarantees that reviews with the "Verified Booksy user" tag have been added by registered Booksy users who have had an appointment with the provider. A registered Booksy user has the opportunity to add a review only after the service has been provided to them.</p>
+                <p>Booksy guarantees that reviews with th have been added by registered Booksy users who have had an appointment with the provider. A registered Booksy user has the opportunity to add a review only after the service has been provided to them.</p>
               </div>
 
             </div>

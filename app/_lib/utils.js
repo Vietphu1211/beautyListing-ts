@@ -1,7 +1,9 @@
-import { useRouter } from "next/router";
+
+
+
 
 export const updateCategoryInURL = (slug) => {
-  const router = useRouter();
+  // const router = useRouter();
   const params = new URLSearchParams(router.query);
 
   if (category === 'all') {
