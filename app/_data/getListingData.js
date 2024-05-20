@@ -10,6 +10,7 @@ const getListingData = [
         alt: "Alpha Beauty Salon",
         addressOfStore: "123 Main Street, City, Country",
         reviewOfStore: 4.5,
+        numberOfReviews: 100,
         price:300,
         category:[
             {
@@ -39,6 +40,7 @@ const getListingData = [
         alt: "Belle Hair Studio",
         addressOfStore: "456 Oak Avenue, Town, Country",
         reviewOfStore: 5,
+        numberOfReviews: 123,
         price:400,
         category:[
             {
@@ -69,6 +71,7 @@ const getListingData = [
         alt: "Chic Nails & Spa",
         addressOfStore: "789 Elm Street, Town, Country",
         reviewOfStore: 5,
+        numberOfReviews: 456,
         price:100,
         category:[
             {
@@ -97,6 +100,7 @@ const getListingData = [
         src: "https://plus.unsplash.com/premium_photo-1664301489002-2fed4596c101?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         addressOfStore: "101 Pine Avenue, City, Country",
         reviewOfStore: 5,
+        numberOfReviews: 675,
         price:200,
         category:[
             {
@@ -126,6 +130,7 @@ const getListingData = [
         alt: "Elegance Beauty Spa",
         addressOfStore: "555 Cedar Road, Town, Country",
         reviewOfStore: 4,
+        numberOfReviews: 234,
         price:300,
         category:[
             {
@@ -155,6 +160,7 @@ const getListingData = [
         alt: "Fabulous Eyewear Boutique",
         addressOfStore: "246 Oak Street, City, Country",
         reviewOfStore: 4,
+        numberOfReviews: 78,
         price:400,
         category:[
             {
@@ -184,6 +190,7 @@ const getListingData = [
         alt: "Glamour Makeup Studio",
         addressOfStore: "777 Maple Avenue, Town, Country",
         reviewOfStore: 5,
+        numberOfReviews: 456,
         price:500,
         category:[
             {
@@ -213,6 +220,7 @@ const getListingData = [
         alt: "Heavenly Spa Retreat",
         addressOfStore: "888 Elm Street, City, Country",
         reviewOfStore: 5,
+        numberOfReviews: 89,
         price:400,
         category:[
             {
@@ -242,6 +250,7 @@ const getListingData = [
         alt: "Iconic Hair Salon",
         addressOfStore: "333 Cedar Road, Town, Country",
         reviewOfStore: 5,
+        numberOfReviews: 234,
         price:300,
         category:[
             {
@@ -271,6 +280,7 @@ const getListingData = [
         alt: "Jewel Nail Bar",
         addressOfStore: "456 Pine Avenue, City, Country",
         reviewOfStore: 4,
+        numberOfReviews: 8,
         price:500,
         category:[
             {
@@ -300,6 +310,7 @@ const getListingData = [
         alt: "Kingsman Barber Lounge",
         addressOfStore: "999 Oak Street, Town, Country",
         reviewOfStore: 4,
+        numberOfReviews: 123,
         price:200,
         category:[
             {
@@ -329,6 +340,7 @@ const getListingData = [
         alt: "Luxe Beauty Bar",
         addressOfStore: "222 Maple Road, City, Country",
         reviewOfStore: 3,
+        numberOfReviews: 12,
         price:100,
         category:[
             {
@@ -359,6 +371,7 @@ const getListingData = [
         addressOfStore: "789 Cedar Avenue, Town, Country",
         reviewOfStore: 3,
         price:200,
+        numberOfReviews: 345,
         category:[
             {
                 id: 1,
@@ -387,6 +400,7 @@ const getListingData = [
         alt: "Nirvana Day Spa",
         addressOfStore: "555 Pine Street, City, Country",
         reviewOfStore: 4,
+        numberOfReviews: 657,
         price:300,
         category:[
             {
@@ -416,6 +430,7 @@ const getListingData = [
         alt: "Opulent Makeup Studio",
         addressOfStore: "101 Oak Road, Town, Country",
         reviewOfStore: 4,
+        numberOfReviews: 123,
         price:400,
         category:[
             {
@@ -445,6 +460,7 @@ const getListingData = [
         alt: "Pristine Nails & Spa",
         addressOfStore: "123 Cedar Avenue, City, Country",
         reviewOfStore: 5,
+        numberOfReviews: 123,
         price:200,
         category:[
             {
@@ -481,6 +497,7 @@ const getListingData = [
         alt: "Queen's Beauty Boutique",
         addressOfStore: "456 Maple Road, Town, Country",
         reviewOfStore: 4,
+        numberOfReviews: 179,
         price:500,
         category:[
             {
@@ -510,6 +527,7 @@ const getListingData = [
         alt: "Radiant Skin Spa",
         addressOfStore: "999 Pine Street, City, Country",
         reviewOfStore: 4,
+        numberOfReviews: 87,
         price:600,
         category:[
             {
@@ -539,6 +557,7 @@ const getListingData = [
         alt: "Serenity Salon & Spa",
         addressOfStore: "789 Oak Avenue, Town, Country",
         reviewOfStore: 3,
+        numberOfReviews: 36,
         price:200,
         category:[
             {
@@ -568,6 +587,7 @@ const getListingData = [
         alt: "Tranquil Wellness Center",
         addressOfStore: "333 Elm Street, City, Country",
         reviewOfStore: 3,
+        numberOfReviews: 77,
         price:300,
         category:[
             {
@@ -597,6 +617,7 @@ const getListingData = [
         alt: "Ultimate Grooming Lounge",
         addressOfStore: "666 Maple Road, Town, Country",
         reviewOfStore: 5,
+        numberOfReviews: 899,
         price:200,
         category:[
             {

@@ -134,6 +134,7 @@ setCategory(params.get('category'))
               alt={listing.alt}
               addressOfStore={listing.addressOfStore}
               reviewOfStore={listing.reviewOfStore}
+              numberOfReviews={listing.numberOfReviews}
               badge={listing.badge || ''}
               
             />

@@ -25,7 +25,7 @@ const SearchResultBox = ({
     // console.log("alo check>>"+stringQuery)
    
     return (
-        <div className='w-full md:w-6/12 flex flex-col gap-5 mt-5'>
+        <div className='w-full  flex flex-col gap-5 mt-5'>
             {/* div này thể hiện những tìm kiếm gần đây */}
             <div>
                 <h3 className='font-normal text-sm md:font-semibold md:text-base'>{serviceLabel}</h3>
@@ -47,13 +47,13 @@ const SearchResultBox = ({
             </div>
 
 {/* results of filtering by business */}
-            <div>
+            <div className='flex flex-col justify-center'>
                 <h3 className='font-normal text-sm md:font-semibold md:text-base'>{businessLabel}</h3>
                 {/* chổ này để render những gì user đã search mới nhất */}
-                <div className=' w-8/12 '>
+                <div className='flex flex-col justify-center w-12/12 gap-3 '>
                     {filterBusinessData && filterBusinessData.map((business) => (
                         <Link key={business.listingId} href={`listing/${business.slug}`}
-                            className=' text-sm whitespace-nowrap mt-3 flex flex-row items-center gap-3 h-[35px] overflow-hidden'>
+                            className=' text-sm whitespace-nowrap mt-3 flex flex-row justify-start items-center gap-3 h-[35px] overflow-hidden'>
                             {/* <SquareCheck  className='mx-1 text-neutral-500 text-sm'/> */}
                             <Image
                             src={business.src} 
@@ -79,21 +79,20 @@ const SearchResultBox = ({
 
 {/* results of filtering by Recomendation */}
 
-            <div>
-                <h3 className='font-normal text-sm md:font-semibold md:text-base'>{recomendedLabel}</h3>
                 {/* tạo truy vấn api từ máy chủ lấy các dịch vụ khớp với từ khóa cần tìm. Nếu inputValue === title của service thì render ra các cửa hàng có service đó nếu click vào search */}
+            {/* <div>
+                <h3 className='font-normal text-sm md:font-semibold md:text-base'>{recomendedLabel}</h3>
 
                 <div className=' w-8/12 '>
                     {filteredServiceData && filteredServiceData.map((service, index) => (
                         <Link key={index} href={service.slug}
                             className='bg-neutral-200 rounded-sm p-2 mx-2 text-sm whitespace-nowrap mt-4 flex flex-row items-center'>
-                            {/* <SquareCheck  className='mx-1 text-neutral-500 text-sm'/> */}
                             {service.title}
 
                         </Link>
                     ))}
                 </div>
-            </div>
+            </div> */}
             
         </div>
     )
