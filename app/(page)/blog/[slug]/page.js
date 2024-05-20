@@ -44,14 +44,14 @@ export default function Page() {
             </div>
             {/* content of post */}
             <div>
-              <p>Sales planning is a fundamental component of sound selling. After all, you can‘t structure an effective sales effort if you don’t have, well, structure. Everyone — from the top to the bottom of a sales org — benefits from having solid, actionable, thoughtfully organized sales plans in place.</p>
+              <p>Sales planning is a fundamental component of sound selling. After all, you c have, well, structure. Everyone — from the top to the bottom of a sales org — benefits from having solid, actionable, thoughtfully organized sales plans in place.</p>
               <Image
                 src="https://images.unsplash.com/photo-1713341087485-a8cf83fdeafb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D"
                 alt="text"
                 width={500}
                 height={200} />
               <p>
-                "This kind of planning offers clarity and direction for your sales team — covering everything from the prospects you‘re trying to reach to the goals you’re trying to hit to the insight you're trying to deliver on.But putting together one of these plans isn‘t always straightforward, so to help you out, I’ve compiled this detailed guide to sales planning — including expert-backed insight and examples — that will ensure your next sales plan is fundamentally sound and effective"
+                his kind of planning offers clarity and direction for your sales team — covering everything from the prospects y trying to reach to the goals ye trying to hit to the insightrying to deliver on.But putting together one of these plans lways straightforward, so to help you out compiled this detailed guide to sales planning — including expert-backed insight and examples — that will ensure your next sales plan is fundamentally sound and
               </p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function Page() {
         </div>
         <hr className='my-5 shadow-sm'/>
         <div className='flex flex-col items-center justify-center gap-3 my-5'>
-          <p className='text-xl font-semibold'>"Don't forget to share this post!</p>
+          <p className='text-xl font-semibold'>Dorget to share this post!</p>
           <div className='flex flex-row items-center justify-center gap-3 cursor-pointer'>
           <Facebook  className='hover:text-primary'/>
           <Instagram  className='hover:text-primary'/>
