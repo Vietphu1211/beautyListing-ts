@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { Suspense, useState } from 'react'
 import Navbar from './Navbar'
-import UserMenu from './UserMenu'
+import UserMenu from './HambugerMenu'
 import { CornerUpLeft, Heart, Search } from 'lucide-react';
 import Image from 'next/image'
 
@@ -16,6 +16,9 @@ import SearchResultBox from '../search/SearchResultBox'
 import { useDebouncedCallback } from 'use-debounce'
 import DialogComponent from '../dialog/SearchDialog'
 import { title } from 'process'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import { Button } from '@/components/ui/button'
+import { UserAvatar } from '../UserAvatar'
 /**Dùng hook DebounceCallback để set time truy vấn dữ liệu */
 
 
@@ -121,12 +124,12 @@ const Header = () => {
                 <div className='flex flex-row gap-5 justify-start items-center'>
                     <Navbar />
                     <div className='hidden md:flex flex-row justify-center items-center gap-3 text-white '>
-                        <Link href='/login' className='border-r-2 hover:text-primary'>
+                        {/* <Link href='/login' className='border-r-2 hover:text-primary'>
                             <p className='mx-3 text-sm '>Login</p>
-                        </Link>
-                        <Link href="/signup" className='text-sm hover:text-primary'>
-                            <p className='text-sm font-bold'>Sign up</p>
-                        </Link>
+                            <signIn onClick={()=>signIn} />
+                        </Link> */}
+                        <Button className='text-white bg-black/0 border-0' variant='outline' onClick={() => signIn()}>Sign In</Button>
+                        <Button variant='outline' className='text-white bg-black/0 border-0' onClick={() => signOut()}>Sign Out</Button>
                     </div>
                     <Heart
                         strokeWidth={1.5}
@@ -135,8 +138,8 @@ const Header = () => {
                         className='hidden md:block text-white hover:text-primary cursor-pointer' />
                     <UserMenu
                         onClick={() => dropDownMenu()}
-
                     />
+                    
                 </div>
 
                 {/* search bar */}

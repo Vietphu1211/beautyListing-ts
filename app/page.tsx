@@ -10,6 +10,9 @@ import Feelback from "./_components/feelback/Feelback";
 import Introduction from "./_components/introduction/Introduction";
 import Hero from "./_components/hero/Hero";
 import ClientOnly from "./_components/ClientOnly";
+import { SessionProvider, signIn } from "next-auth/react"
+import { Button } from "@/components/ui/button";
+import { AppProps } from "next/app";
 
 
 
@@ -34,7 +37,9 @@ export default function Home() {
   },[])
   return (
     <ClientOnly>
-      {
+      
+      
+            {
         isLoading ? (
           <main className="relative">
             <div className={`${scrollPositionY.top <= 50 ? 'absolute':'bg-neutral-800 sticky md:absolute py-3'} top-0 my-3 absolute   w-full mx-auto z-50`}>
@@ -51,6 +56,7 @@ export default function Home() {
           <Loading />
         )
       }
+    
     </ClientOnly>
 
   );
