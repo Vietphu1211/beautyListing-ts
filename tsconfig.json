@@ -25,14 +25,23 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/_data/serviceData.ts", "app/_data/reviewGuest.ts", "app/_data/postCategoryItem.ts", "app/_data/navItem.ts", "app/_data/locationdata.ts", "app/_data/getListingData.ts", "app/_data/getBlogPostItem.ts", "app/_data/listingCategoryItem.js"  ],
+    "**/*.tsx",
+    "app/_data/serviceData.ts",
+    "app/_data/reviewGuest.ts",
+    "app/_data/postCategoryItem.ts",
+    "app/_data/navItem.ts",
+    "app/_data/locationdata.ts",
+    "app/_data/getListingData.ts",
+    "app/_data/getBlogPostItem.ts",
+    "app/_data/listingCategoryItem.js"
+  ],
   "exclude": [
     "node_modules"
   ]
