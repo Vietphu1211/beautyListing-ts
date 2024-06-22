@@ -38,7 +38,7 @@ const ListingCard = ({
                     <Badge className='bg-primary text-white shadow-md'>{badge}</Badge>
                 </div>
                 <Link
-                    href={`/listing/${slug}`}
+                    href={`/listings/${slug}`}
                     className='h-full w-full cursor-pointer'>
                     <Image
                         alt={alt}

@@ -1,6 +1,6 @@
 'use client'
 import Listings from "./_components/listings/Listings";
-import Blog from "./_components/Blog/Blog";
+import Blog from "../pages/_components/Blog/Blog";
 import Loading from "./Loading";
 import {useEffect, useState } from "react";
 import Header from "./_components/header/Header";
@@ -43,7 +43,7 @@ export default function Home() {
             <Hero />
             <Listings />
             <Introduction />
-            <Blog />
+            {/* <Blog /> */}
             <Feelback />
             <Footer />
           </main>

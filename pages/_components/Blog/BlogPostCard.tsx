@@ -4,42 +4,36 @@ import Link from 'next/link'
 import { LockKeyhole } from 'lucide-react';
 import styles from './blog.module.css'
 import { useRouter } from 'next/navigation';
+import Date from '../date';
 
 
 interface BlogPostCardProps{
-    id: number
     title: string
-    subtitle: string
-    bodyText: string
-    img: string
+    description: string
+    featuredImage: string
     authorName: string
     authorAvatar: string
     publishedDate: string
-    category: string
-    slug: string
-    onClick: () => void
+    category: [
+        {name: string}
+    ],
+    slug: string,
+    altText: string,
 }
 const BlogPostCard: React.FC<BlogPostCardProps> = ({
-    id,
     title,
-    bodyText,
-    img,
+    description,
+    featuredImage,
     authorName,
     authorAvatar,
     publishedDate,
     category,
     slug,
-    onClick
-
+    altText
 }) => {
-    
-  
-    
     return (
         <>
-
             <div className='
-         
         flex flex-col justify-between items-start gap-1
         max-w-sm min-w-[280px] md:w-[300px] h-[400px] 
         relative
@@ -47,16 +41,16 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
         cursor-pointer
         group
         '
-        key={id}>
+        >
             {/* image */}
             <div className='w-full flex-none h-[200px] overflow-hidden rounded-t-md '>
                 <Link 
-                href={"/blog/"+slug || '/'}
+                href={`/blog/${slug}` || '/'}
                 className='w-full'
-                onClick={onClick}>
+                >
                 <Image
-                    src={img}
-                    alt={title}
+                    src={featuredImage}
+                    alt={altText}
                     width={250}
                     height={150}
                     className='object-cover w-full h-full rounded-t-md shadow-md z-10
@@ -77,10 +71,17 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
                         </span>
                         Members only
                         </p>
-                        <p className='text-sm font-medium text-primary bg-neutral-200 rounded-full px-3 py-0'>#{category}</p>
+                        <p className='text-sm font-medium text-primary bg-neutral-200 rounded-full px-3 py-0'>#
+                       {category?.map((cate)=>(
+                        <span key={cate?.name}>{cate?.name}</span>
+                       ))}
+                        </p>
                     </div>
-                    <h3 className='text-black text-lg font-semibold line-clamp-1 hover:text-primary'>{title}</h3>
-                    <p className='text-neutral-500 text-base font-medium line-clamp-2'>{bodyText}</p>
+                    <h2 className='text-black text-lg font-semibold line-clamp-1 hover:text-primary'>{title}</h2>
+                    <div className='text-neutral-500 text-base font-medium line-clamp-2'
+                    dangerouslySetInnerHTML={{__html: description}}
+                    >
+                        </div>
                 </div>
                 <Link 
                 href="/"
@@ -97,9 +98,11 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
                         text-sm font-medium
                         md:text-base md:font-semibold'>
                         {authorName}</p>
-                        <p className='text-xs font-light
+                        <div className='text-xs font-light
                         md:text-sm md:font-medium
-                        '>{publishedDate}</p>
+                        '>
+                            <Date dateString={publishedDate}/>
+                            </div>
                     </div>
                 </Link>
             </div>

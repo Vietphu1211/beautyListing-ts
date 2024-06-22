@@ -1,16 +1,16 @@
 'use client'
 
-import Container from "../Container"
-import Heading from "../Heading"
+import Container from "../../../app/_components/Container"
+import Heading from "../../../app/_components/Heading"
 import BlogPostCard from "./BlogPostCard"
-import PostCardSkeleton from "../skeleton/PostCardSkeleton"
+import PostCardSkeleton from "../../../app/_components/skeleton/PostCardSkeleton"
 import { useCallback, useEffect, useRef, useState } from "react"
 // import SlidingHandleButton from "../SlidingHandleButton"
 import getBlogPostItem from "@/app/_data/getBlogPostItem"
 import { useRouter } from "next/navigation"
-import SlidingHandleButton from "../SlidingHandleButton"
+import SlidingHandleButton from "../../../app/_components/SlidingHandleButton"
 import { Skeleton } from "@/components/ui/skeleton"
-import { SkeletonCard } from "../skeleton/SkeletonCard"
+import { SkeletonCard } from "../../../app/_components/skeleton/SkeletonCard"
 
 
 
