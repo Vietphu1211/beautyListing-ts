@@ -8,7 +8,7 @@ const nunito = Nunito({subsets: ["latin"]})
 
 
 export const metadata = {
-  title: "Booking làm nail, cắt tóc",
+  title: "Đặt lịch làm nail, cắt tóc",
   description: "Khám phá hàng ngàn cửa hàng làm đẹp tại lamdep.vn",
 };
 

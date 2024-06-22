@@ -19,6 +19,18 @@ const nextConfig = {
                 hostname:'unsplash.com',
                 port:'',
                 pathname:'/**'
+            },
+            {
+                protocol:"http",
+                hostname:'beautylistingwordpress.test',
+                port:'',
+                pathname:'/**'
+            },
+            {
+                protocol:"http",
+                hostname:'2.gravatar.com',
+                port:'',
+                pathname:'/**'
             }
         ]
     }
