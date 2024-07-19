@@ -7,13 +7,13 @@ import SlidingHandleButton from '../SlidingHandleButton'
 import getListingData from '@/app/_data/getListingData'
 
 const Listings = () => {
-  const listRef = useRef(null)
-
+  
   const listingData = getListingData
   const filterListingdata = listingData.filter(listing=>listing.badge.includes('nổi bật'));
-
+  
+  const listRef = useRef<HTMLDivElement>(null)
   const scrollRightHandle = () => {
-    console.log('hello')
+    // console.log('hello')
     if(listRef.current) {
       listRef.current.scrollBy({
           left:300,
@@ -22,7 +22,7 @@ const Listings = () => {
   }
   };
   const scrollLeftHandle = () => {
-    console.log('hello')
+    // console.log('hello')
     if (listRef.current) {
       listRef.current.scrollBy({
         left: -300,
@@ -42,7 +42,6 @@ const Listings = () => {
             className='flex flex-row justify-start items-center gap-2 overflow-x-auto md:overflow-hidden py-5 '
             ref={listRef}
           >
-
           {
             filterListingdata?.map(filterListing =>(
 
